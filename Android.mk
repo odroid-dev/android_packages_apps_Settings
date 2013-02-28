@@ -18,8 +18,10 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_MODULE_TAGS := optional
 LOCAL_USE_AAPT2 := true
 
-LOCAL_SRC_FILES := $(call all-java-files-under, src)
-LOCAL_SRC_FILES += $(call all-java-files-under, ../RMSettings/src)
+LOCAL_SRC_FILES := $(call all-java-files-under, src) \
+    $(call all-java-files-under, ../RMSettings/src) \
+    $(call all-java-files-under,../../../external/koush/Widgets/Widgets/src) \
+    $(call all-java-files-under,../../../external/koush/Superuser/Superuser/src)
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-slices-builders \
@@ -51,7 +53,9 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     frameworks/support/v14/preference/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/recyclerview/res \
-    packages/apps/RMSettings/res
+    packages/apps/RMSettings/res \
+    external/koush/Widgets/Widgets/res \
+    external/koush/Superuser/Superuser/res
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
@@ -61,7 +65,10 @@ LOCAL_AAPT_FLAGS := --auto-add-overlay \
     --extra-packages android.support.v17.preference \
     --extra-packages android.support.v7.appcompat \
     --extra-packages android.support.v7.recyclerview \
-    --extra-packages com.rms.settings
+    --extra-packages com.rms.settings \
+    --extra-packages com.koushikdutta.superuser:com.koushikdutta.widgets
+
+LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled
