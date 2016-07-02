@@ -7,4 +7,7 @@
     <!-- AOSP Tag -->
     <string name="aosptag_version">AOSP Tag</string>
     <string name="aosptag_version_default">Unknown</string>
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
 </resources>
