@@ -166,4 +166,11 @@
         android:summary="@string/summary_placeholder"
         settings:allowDividerAbove="true"/>
 
+    <!-- secuflag Mod version -->
+    <Preference
+        android:key="secuflag_version"
+        android:order="44"
+        android:title="@string/secuflag_version"
+        android:summary="@string/secuflag_version_default" />
+
 </PreferenceScreen>

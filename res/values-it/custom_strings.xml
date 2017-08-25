@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <!-- secuflag Mod version -->
+    <string name="secuflag_version">Versione Mod secuflag</string>
+    <string name="secuflag_version_default">Sconosciuta</string>
+</resources>
