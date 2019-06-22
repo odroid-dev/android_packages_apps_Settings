@@ -43,6 +43,7 @@ import com.android.settings.deviceinfo.DeviceModelPreferenceController;
 import com.android.settings.deviceinfo.DeviceNamePreferenceController;
 import com.android.settings.deviceinfo.FccEquipmentIdPreferenceController;
 import com.android.settings.deviceinfo.FeedbackPreferenceController;
+import com.android.settings.deviceinfo.KernelVersionPreferenceController;
 import com.android.settings.deviceinfo.IpAddressPreferenceController;
 import com.android.settings.deviceinfo.ManualPreferenceController;
 import com.android.settings.deviceinfo.PhoneNumberPreferenceController;
@@ -135,6 +136,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         controllers.add(new SecuflagVersionPreferenceController(context));
         controllers.add(new AOSPTagPreferenceController(context));
         controllers.add(new SELinuxStatusPreferenceController(context));
+        controllers.add(new KernelVersionPreferenceController(context));
         return controllers;
     }
 
