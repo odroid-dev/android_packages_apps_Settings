@@ -3,4 +3,8 @@
      <!-- secuflag Mod version -->
     <string name="secuflag_version">Versione Mod secuflag</string>
     <string name="secuflag_version_default">Sconosciuta</string>
+
+    <!-- AOSP Tag -->
+    <string name="aosptag_version">Tag AOSP</string>
+    <string name="aosptag_version_default">Sconosciuto</string>
 </resources>

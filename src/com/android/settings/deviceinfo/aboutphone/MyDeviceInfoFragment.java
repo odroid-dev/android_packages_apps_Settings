@@ -34,6 +34,7 @@ import com.android.settings.accounts.EmergencyInfoPreferenceController;
 import com.android.settings.applications.LayoutPreference;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.dashboard.SummaryLoader;
+import com.android.settings.deviceinfo.AOSPTagPreferenceController;
 import com.android.settings.deviceinfo.SecuflagVersionPreferenceController;
 import com.android.settings.deviceinfo.BluetoothAddressPreferenceController;
 import com.android.settings.deviceinfo.BrandedAccountPreferenceController;
@@ -131,6 +132,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         controllers.add(
                 new BuildNumberPreferenceController(context, activity, fragment, lifecycle));
         controllers.add(new SecuflagVersionPreferenceController(context));
+        controllers.add(new AOSPTagPreferenceController(context));
         return controllers;
     }
 
