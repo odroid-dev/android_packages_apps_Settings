@@ -180,7 +180,8 @@
         android:key="secuflag_version"
         android:order="45"
         android:title="@string/secuflag_version"
-        android:summary="@string/secuflag_version_default" />
+        android:summary="@string/secuflag_version_default"
+        settings:allowDividerAbove="true"/>
 
     <!-- SELinux status information -->
     <Preference
