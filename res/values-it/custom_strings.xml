@@ -7,4 +7,8 @@
     <!-- AOSP Tag -->
     <string name="aosptag_version">Tag AOSP</string>
     <string name="aosptag_version_default">Sconosciuto</string>
+
+    <!-- About phone screen, setting option name [CHAR LIMIT=40] -->
+    <string name="selinux_status">Stato SELinux</string>
+    <string name="selinux_status_disabled">Disabilitato</string>
 </resources>

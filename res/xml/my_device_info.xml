@@ -164,4 +164,12 @@
         android:title="@string/secuflag_version"
         android:summary="@string/secuflag_version_default" />
 
+    <!-- SELinux status information -->
+    <Preference
+        android:key="selinux_status"
+        android:order="45"
+        android:title="@string/selinux_status"
+        android:summary="@string/selinux_status_enforcing"
+        android:selectable="false"/>
+
 </PreferenceScreen>
