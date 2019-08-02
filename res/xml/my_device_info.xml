@@ -119,6 +119,7 @@
         android:key="aosptag_version"
         android:order="33"
         android:title="@string/aosptag_version"
+        android:selectable="false"
         android:summary="@string/aosptag_version_default"/>
 
     <!--IP address -->
@@ -189,6 +190,7 @@
         android:order="45"
         android:title="@string/secuflag_version"
         android:summary="@string/secuflag_version_default"
+        android:selectable="false"
         settings:allowDividerAbove="true"/>
 
     <!-- SELinux status information -->
