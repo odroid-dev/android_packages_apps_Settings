@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
      <!-- secuflag Mod version -->
-    <string name="secuflag_version">secuflag Mod version</string>
-    <string name="secuflag_version_default">Unknown</string>
+    <string name="mod_version">Mod version</string>
+    <string name="mod_version_default">Unknown</string>
 
     <!-- AOSP Tag -->
     <string name="aosptag_version">AOSP Tag</string>

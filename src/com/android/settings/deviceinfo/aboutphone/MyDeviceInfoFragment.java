@@ -35,7 +35,7 @@ import com.android.settings.applications.LayoutPreference;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.dashboard.SummaryLoader;
 import com.android.settings.deviceinfo.AOSPTagPreferenceController;
-import com.android.settings.deviceinfo.SecuflagVersionPreferenceController;
+import com.android.settings.deviceinfo.ModVersionPreferenceController;
 import com.android.settings.deviceinfo.BluetoothAddressPreferenceController;
 import com.android.settings.deviceinfo.BrandedAccountPreferenceController;
 import com.android.settings.deviceinfo.BuildNumberPreferenceController;
@@ -135,7 +135,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         controllers.add(new FccEquipmentIdPreferenceController(context));
         controllers.add(
                 new BuildNumberPreferenceController(context, activity, fragment, lifecycle));
-        controllers.add(new SecuflagVersionPreferenceController(context));
+        controllers.add(new ModVersionPreferenceController(context));
         controllers.add(new AOSPTagPreferenceController(context));
         controllers.add(new SELinuxStatusPreferenceController(context));
         controllers.add(new KernelVersionPreferenceController(context));

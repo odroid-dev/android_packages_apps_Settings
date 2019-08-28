@@ -186,10 +186,10 @@
 
     <!-- secuflag Mod version -->
     <Preference
-        android:key="secuflag_version"
+        android:key="mod_version"
         android:order="45"
-        android:title="@string/secuflag_version"
-        android:summary="@string/secuflag_version_default"
+        android:title="@string/mod_version"
+        android:summary="@string/mod_version_default"
         android:selectable="false"
         settings:allowDividerAbove="true"/>
 

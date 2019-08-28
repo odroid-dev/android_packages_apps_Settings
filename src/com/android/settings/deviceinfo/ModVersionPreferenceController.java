@@ -10,34 +10,34 @@ import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
-public class SecuflagVersionPreferenceController extends AbstractPreferenceController implements
+public class ModVersionPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin {
 
-    private static final String PROPERTY_SECUFLAG_VERSION = "ro.secuflag.version";
-    private static final String KEY_SECUFLAG_VERSION = "secuflag_version";
+    private static final String PROPERTY_MOD_VERSION = "ro.mod.version";
+    private static final String KEY_MOD_VERSION = "mod_version";
 
-    public SecuflagVersionPreferenceController(Context context) {
+    public ModVersionPreferenceController(Context context) {
         super(context);
     }
 
     @Override
     public boolean isAvailable() {
-        return !TextUtils.isEmpty(SystemProperties.get(PROPERTY_SECUFLAG_VERSION));
+        return !TextUtils.isEmpty(SystemProperties.get(PROPERTY_MOD_VERSION));
     }
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        final Preference pref = screen.findPreference(KEY_SECUFLAG_VERSION);
+        final Preference pref = screen.findPreference(KEY_MOD_VERSION);
         if (pref != null) {
-            String summary = SystemProperties.get(PROPERTY_SECUFLAG_VERSION);
+            String summary = SystemProperties.get(PROPERTY_MOD_VERSION);
             pref.setSummary(summary);
         }
     }
 
     @Override
     public String getPreferenceKey() {
-        return KEY_SECUFLAG_VERSION;
+        return KEY_MOD_VERSION;
     }
 }
 
