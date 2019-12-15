@@ -166,4 +166,6 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
+    // RMS Additions.
+    public static class RMSettingsActivity extends SettingsActivity {}
 }
