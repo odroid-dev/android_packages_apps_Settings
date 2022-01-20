@@ -55,6 +55,7 @@ public class DiscoverableFooterPreferenceController extends BasePreferenceContro
     private LocalBluetoothManager mLocalManager;
     private LocalBluetoothAdapter mLocalAdapter;
     private AlwaysDiscoverable mAlwaysDiscoverable;
+    private boolean mIsAlwaysDiscoverable;
 
     public DiscoverableFooterPreferenceController(Context context) {
         super(context, KEY);
@@ -80,8 +81,9 @@ public class DiscoverableFooterPreferenceController extends BasePreferenceContro
         };
     }
 
-    public void init(DashboardFragment fragment) {
+    public void init(DashboardFragment fragment, boolean isAlwaysDiscoverable) {
         mFooterPreferenceMixin = new FooterPreferenceMixin(fragment, fragment.getLifecycle());
+        mIsAlwaysDiscoverable = isAlwaysDiscoverable;
     }
 
     @VisibleForTesting
@@ -90,6 +92,11 @@ public class DiscoverableFooterPreferenceController extends BasePreferenceContro
         mFooterPreferenceMixin = footerPreferenceMixin;
         mPreference = preference;
         mAlwaysDiscoverable = alwaysDiscoverable;
+    }
+
+    @VisibleForTesting
+    void setAlwaysDiscoverable(boolean isAlwaysDiscoverable) {
+        mIsAlwaysDiscoverable = isAlwaysDiscoverable;
     }
 
     @Override
@@ -115,8 +122,10 @@ public class DiscoverableFooterPreferenceController extends BasePreferenceContro
     public void onResume() {
         try {
             mContext.registerReceiver(mBluetoothChangedReceiver,
-                    new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
-            mAlwaysDiscoverable.start();
+                new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+            if (mIsAlwaysDiscoverable) {
+                mAlwaysDiscoverable.start();
+            }
             updateFooterPreferenceTitle(mLocalAdapter.getState());
         } catch (Exception e) {
             Log.w("DiscoverableFooterPreferenceController", "B/T is not available");
@@ -127,7 +136,9 @@ public class DiscoverableFooterPreferenceController extends BasePreferenceContro
     public void onPause() {
         try {
             mContext.unregisterReceiver(mBluetoothChangedReceiver);
-            mAlwaysDiscoverable.stop();
+            if (mIsAlwaysDiscoverable) {
+                mAlwaysDiscoverable.stop();
+            }
         } catch (Exception e) {
             Log.w("DiscoverableFooterPreferenceController", "B/T is not available");
         }
